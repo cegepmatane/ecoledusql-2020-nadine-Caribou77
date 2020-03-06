@@ -40,11 +40,16 @@ $response->addHTML($controller->index($sqlQueryForm));
 //$response->addHTML("COUCOU AJAX");
 $boutonProfesseurVirtuel = '<form><input type="submit" value="Demander une rétroaction"></form>'; 
 
+
+// TODO deplacer event dans le js
+
+$boutonProfesseurVirtuel = '<form id="action-professeur-virtuel"><input type="submit" value="Demander une rétroaction"></form>'; 
+
+$fenetreProfesseurVirtuel = '<div id="zone-professeur-virtuel"></div>';
+
 // TODO deplacer tag script dans header
 $jsProfesseurVirtuel = '<script data-cfasync="false" type="text/javascript" src="js/professeur-virtuel.js"></script>';
-// TODO deplacer event dans le js
-$boutonProfesseurVirtuel = '<form onsubmit="demanderRetroaction()"><input type="submit" value="Demander une rétroaction"></form>'; 
-$fenetreProfesseurVirtuel = '<div id="zone-professeur-virtuel"></div>';
+
 $response->addHTML($jsProfesseurVirtuel);
 $response->addHTML($boutonProfesseurVirtuel);
 $response->addHTML($fenetreProfesseurVirtuel);

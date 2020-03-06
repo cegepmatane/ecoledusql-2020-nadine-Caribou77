@@ -1,4 +1,8 @@
 <?php
 // (3 - TRAITEMENT)
-?>
-COUCOU
+//print_r($_GET);
+$sql = $_GET['sql'];
+// traitement du sql
+
+// retour?>
+<div>Votre SQL (<?=$sql?>) est CORRECT.</div>
